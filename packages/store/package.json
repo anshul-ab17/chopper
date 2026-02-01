@@ -1,8 +1,11 @@
 {
-  "name": "server",
+  "name": "@repo/store",
   "module": "index.ts",
   "type": "module",
   "private": true,
+  "exports": {
+    "./client": "./index.ts"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
@@ -10,7 +13,8 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "hono": "^4.11.7",
-    "@repo/store":"*"
+    "@prisma/client": "^7.3.0",
+    "dotenv": "^17.2.3",
+    "prisma": "^7.3.0"
   }
 }
